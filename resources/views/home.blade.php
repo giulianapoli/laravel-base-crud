@@ -3,7 +3,7 @@
 @section('content')
 
 <button>
-    <a href="{{$booking->guest}}">Registrati!</a>
+    <a href="{{route('booking.create')}}">Registrati!</a>
 </button>
 
 <table>
@@ -27,7 +27,7 @@
             <td> {{$booking->room}} </td>
             <td> {{$booking->from_date}} </td>
             <td> {{$booking->to_date}} </td>
-            <td><a href="{{$booking->id}}">Dettagli</a></td>
+            <td><a href="{{route('booking.show', $booking->id)}}">Dettagli</a></td>
           </tr>
          @endforeach
    </tbody>

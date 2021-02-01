@@ -57,6 +57,9 @@ class BookingController extends Controller
         $newBooking->more_details = $request->input('moredetails');
 
         $newBooking->save();
+
+        $bookings = Booking::all();
+        return view('home', compact('bookings'));
     }
 
     /**

@@ -13,8 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'BookingController@index')->name('home');
+Route::resource('/booking', 'BookingController');
 
-Route::get('/{id}', 'BookingController@show')->name('guestdetails');
+// Route::resource('/{id}', 'BookingController@show')->name('guestdetails');
 
-Route::get('/create', 'BookingController@create')->name('createuser');
+// Route::resource('/create', 'BookingController@create')->name('createuser');
